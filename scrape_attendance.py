@@ -8,6 +8,13 @@ def get_schedule_url(sport_id, season=2022):
 
 sch = requests.get(get_schedule_url(11))
 
+# Define the CSV format upfront
+def write_game_header(writer):
+    fieldnames = ['gamePk', 'date', 'dayNight', 'day', 'league_nm',
+        'attendance', 'home_id', 'home_name', 'away_id', 'away_name'
+        ]
+    writer.writerow(fieldnames)
+
 def write_game_data(gm, writer):
     data = [gm['gamePk'], gm['officialDate'], gm['dayNight'], pd.Timestamp(gm['officialDate']).day_name(), 
         gm['teams']['home']['team']['league']['name'],
@@ -16,9 +23,11 @@ def write_game_data(gm, writer):
         gm['teams']['away']['team']['id'], gm['teams']['away']['team']['name']]
     writer.writerow(data)
 
+
 season = 2022
 with open(f'attendance_{season}.txt', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile, delimiter=',')
+    write_game_header(writer)
 
     for sport_id in [11, 12, 13, 14]:
         sch = requests.get(get_schedule_url(sport_id, season))
