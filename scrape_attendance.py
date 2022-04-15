@@ -23,4 +23,4 @@ season = 2022
 
 # Each MILB level has its own sport_id, so iterate over them
 att = pd.concat([get_attendance_df(sport_id, season) for sport_id in [11, 12, 13, 14]])
-att.to_csv(f'attendance_{season}.txt')
+att.sort_values('officialDate', ascending=False).to_csv(f'attendance_{season}.txt')
