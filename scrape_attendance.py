@@ -17,10 +17,12 @@ def get_attendance_df(sport_id, season = 2022):
     df = pd.json_normalize(sch['dates'], record_path=['games'])[fieldnames].set_index('gamePk').query('officialDate < @today')
     df['dayOfWeek'] = pd.to_datetime(df['officialDate']).dt.day_name()
     return df
+
+def main(season = 2022):
+    # Each MILB level has its own sport_id, so iterate over them
+    att = pd.concat([get_attendance_df(sport_id, season) for sport_id in [11, 12, 13, 14]])
+    att.sort_values('officialDate', ascending=False).to_csv(f'attendance_{season}.txt')
     
 
-season = 2022
-
-# Each MILB level has its own sport_id, so iterate over them
-att = pd.concat([get_attendance_df(sport_id, season) for sport_id in [11, 12, 13, 14]])
-att.sort_values('officialDate', ascending=False).to_csv(f'attendance_{season}.txt')
+if __name__ == "__main__":
+    main()
