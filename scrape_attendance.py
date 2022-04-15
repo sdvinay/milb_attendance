@@ -1,37 +1,26 @@
 import requests
-import csv
 import pandas as pd
 
 
 def get_schedule_url(sport_id, season=2022):
-    return f'https://statsapi.mlb.com/api/v1/schedule?language=en&sportId={sport_id}&season={season}&sortBy=gameDate&hydrate=gameInfo,team'
+    return f'https://statsapi.mlb.com/api/v1/schedule?language=en&sportId={sport_id}&season={season}&sortBy=gameDate&hydrate=gameInfo'
 
-sch = requests.get(get_schedule_url(11))
 
-# Define the CSV format upfront
-def write_game_header(writer):
-    fieldnames = ['gamePk', 'date', 'dayNight', 'day', 'league_nm',
-        'attendance', 'home_id', 'home_name', 'away_id', 'away_name'
-        ]
-    writer.writerow(fieldnames)
+fieldnames = ['gamePk', 'gameType', 'officialDate', 'dayNight',
+ 'teams.away.team.id', 'teams.away.team.name', 'teams.home.team.id',
+ 'teams.home.team.name', 'gameInfo.attendance']
 
-def write_game_data(gm, writer):
-    data = [gm['gamePk'], gm['officialDate'], gm['dayNight'], pd.Timestamp(gm['officialDate']).day_name(), 
-        gm['teams']['home']['team']['league']['name'],
-        gm['gameInfo']['attendance'],
-        gm['teams']['home']['team']['id'], gm['teams']['home']['team']['name'], 
-        gm['teams']['away']['team']['id'], gm['teams']['away']['team']['name']]
-    writer.writerow(data)
+today = str(pd.Timestamp.today().date())
 
+def get_attendance_df(sport_id, season = 2022):
+    sch = requests.get(get_schedule_url(sport_id, season)).json()
+    df = pd.json_normalize(sch['dates'], record_path=['games'])[fieldnames].set_index('gamePk').query('officialDate < @today')
+    df['dayOfWeek'] = pd.to_datetime(df['officialDate']).dt.day_name()
+    return df
+    
 
 season = 2022
-with open(f'attendance_{season}.txt', 'w', newline='') as csvfile:
-    writer = csv.writer(csvfile, delimiter=',')
-    write_game_header(writer)
 
-    for sport_id in [11, 12, 13, 14]:
-        sch = requests.get(get_schedule_url(sport_id, season))
-        for dt in sch.json()['dates']:
-            for gm in dt['games']:
-                if 'attendance' in gm['gameInfo']:
-                    write_game_data(gm, writer)
+# Each MILB level has its own sport_id, so iterate over them
+att = pd.concat([get_attendance_df(sport_id, season) for sport_id in [11, 12, 13, 14]])
+att.to_csv(f'attendance_{season}.txt')
