@@ -25,8 +25,8 @@ def write_output(df: pd.DataFrame, output_file: str) -> None:
 
 def main(season: int = 2022) -> None:
     # Each MILB level has its own sport_id, so iterate over them
-    mlb_sport_ids = [11, 12, 13, 14]
-    att = pd.concat([get_attendance_df(id, season) for id in mlb_sport_ids])
+    milb_sport_ids = [11, 12, 13, 14]
+    att = pd.concat([get_attendance_df(id, season) for id in milb_sport_ids])
     write_output(att, f'attendance_{season}.txt')    
     
 
