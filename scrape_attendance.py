@@ -22,12 +22,13 @@ def write_output(df: pd.DataFrame, output_file: str) -> None:
     df_out['gameInfo.attendance'] = df_out['gameInfo.attendance'].apply(int)
     df_out = df_out[output_fields].sort_values('officialDate', ascending=False)
     df_out.to_csv(output_file)
+    df_out.to_html(f'{output_file}.html')
 
 def main(season: int = 2022) -> None:
     # Each MILB level has its own sport_id, so iterate over them
     milb_sport_ids = [11, 12, 13, 14]
     att = pd.concat([get_attendance_df(id, season) for id in milb_sport_ids])
-    write_output(att, f'attendance_{season}.txt')    
+    write_output(att, f'output/attendance_{season}.txt')    
     
 
 if __name__ == "__main__":
