@@ -19,7 +19,7 @@ def write_output(df: pd.DataFrame, output_file: str) -> None:
 
     df_out = df.dropna(subset=['isTie']) # filter to include only completed/current games
     df_out['dayOfWeek'] = pd.to_datetime(df_out['officialDate']).dt.day_name()
-    df_out['gameInfo.attendance'] = df_out['gameInfo.attendance'].apply(int)
+    df_out['gameInfo.attendance'] = df_out['gameInfo.attendance'].fillna(0).apply(int)
     df_out = df_out[output_fields].sort_values('officialDate', ascending=False)
     df_out.to_csv(output_file)
     df_out.to_html(f'{output_file}.html')
