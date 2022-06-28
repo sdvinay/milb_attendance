@@ -10,14 +10,15 @@ def get_schedule_url(sport_id: int, season: int = 2022) -> str:
 def get_attendance_df(sport_id: int, season: int = 2022) -> pd.DataFrame:
     schedule_url = get_schedule_url(sport_id, season)
     schedule_data = requests.get(schedule_url).json()
-    df = pd.json_normalize(schedule_data['dates'], record_path=['games']).set_index('gamePk')
-    return df
+    all_gms = pd.json_normalize(schedule_data['dates'], record_path=['games']).set_index('gamePk')
+    played_gms = all_gms.dropna(subset=['isTie']).copy() # filter to include only completed/current games
+
+    return played_gms
 
 def write_gbg_output(gms: pd.DataFrame, output_file: str) -> None:
     output_fields = ['officialDate','teams.home.team.name', 'abbreviation','league.name',
        'gameInfo.attendance', 'dayNight', 'dayOfWeek', 'teams.away.team.name']
 
-    df_out = gms.dropna(subset=['isTie']).copy() # filter to include only completed/current games
     df_out['dayOfWeek'] = pd.to_datetime(df_out['officialDate']).dt.day_name()
     df_out['gameInfo.attendance'] = df_out['gameInfo.attendance'].fillna(0).apply(int)
 
