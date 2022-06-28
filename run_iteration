@@ -3,3 +3,4 @@
 python ./scrape_attendance.py
 ls -ltr output
 rsync -ahzi output/ u35698910@home92388257.1and1-data.host:kumars/vinay/milb_attendance_data
+ssh u35698910@home92388257.1and1-data.host ls -ltr kumars/vinay/milb_attendance_data
