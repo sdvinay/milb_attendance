@@ -13,11 +13,11 @@ def get_attendance_df(sport_id: int, season: int = 2022) -> pd.DataFrame:
     df = pd.json_normalize(schedule_data['dates'], record_path=['games']).set_index('gamePk')
     return df
 
-def write_output(df: pd.DataFrame, output_file: str) -> None:
+def write_gbg_output(gms: pd.DataFrame, output_file: str) -> None:
     output_fields = ['officialDate','teams.home.team.name', 'abbreviation','league.name',
        'gameInfo.attendance', 'dayNight', 'dayOfWeek', 'teams.away.team.name']
 
-    df_out = df.dropna(subset=['isTie']).copy() # filter to include only completed/current games
+    df_out = gms.dropna(subset=['isTie']).copy() # filter to include only completed/current games
     df_out['dayOfWeek'] = pd.to_datetime(df_out['officialDate']).dt.day_name()
     df_out['gameInfo.attendance'] = df_out['gameInfo.attendance'].fillna(0).apply(int)
 
@@ -31,7 +31,7 @@ def main(season: int = 2022) -> None:
     # Each MILB level has its own sport_id, so iterate over them
     milb_sport_ids = [11, 12, 13, 14, 23]
     att = pd.concat([get_attendance_df(id, season) for id in milb_sport_ids])
-    write_output(att, f'output/attendance_{season}.txt')    
+    write_gbg_output(att, f'output/attendance_{season}.txt')    
     
 
 if __name__ == "__main__":
