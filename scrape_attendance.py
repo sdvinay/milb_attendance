@@ -37,7 +37,7 @@ def write_summary_report(gms: pd.DataFrame, output_file: str) -> None:
     df_out = pd.merge(left=totals.reset_index().set_index('teams.home.team.id'), right=team_map, left_index=True, right_index=True)
     for col in ['total_att', 'avg_att']:
         df_out[col] = df_out[col].astype(int)
-    df_out = df_out.sort_values(by=['sortOrder', 'league.id'])[output_fields]
+    df_out = df_out.sort_values(by=['sortOrder', 'league.id', 'avg_att'], ascending=[True, True, False])[output_fields]
     df_out.to_csv(output_file)
     df_out.to_html(f'{output_file}.html')
 
