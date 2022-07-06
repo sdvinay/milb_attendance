@@ -2,6 +2,9 @@ import requests
 import numpy as np
 import pandas as pd
 import typer
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
 
 def get_schedule_url(sport_id: int, season: int = 2022) -> str:
@@ -13,6 +16,7 @@ def get_attendance_sport_id(sport_id: int, season: int = 2022) -> pd.DataFrame:
     schedule_data = requests.get(schedule_url).json()
     all_gms = pd.json_normalize(schedule_data['dates'], record_path=['games']).set_index('gamePk')
     played_gms = all_gms.dropna(subset=['isTie']).copy() # filter to include only completed/current games
+    logging.info(f'get_attendance_sport_id sport_id={sport_id} season={season};  returning {len(played_gms)} games')
 
     return played_gms
 
@@ -20,6 +24,7 @@ def get_attendance_all_levels(season: int = 2022) -> pd.DataFrame:
     # Each MILB level has its own sport_id, so iterate over them
     milb_sport_ids = [11, 12, 13, 14, 23]
     df = pd.concat([get_attendance_sport_id(id, season) for id in milb_sport_ids])
+    logging.info(f'get_attendance_all_levels season={season};  returning {len(df)} games')
     return df
 
 def write_gbg_output(gms: pd.DataFrame, output_file: str) -> None:
@@ -37,6 +42,7 @@ def generate_gbg_report(gms: pd.DataFrame) -> pd.DataFrame:
     team_map = pd.read_csv('output/tm_to_league.csv').set_index('id')
     df_out = pd.merge(left=df_out, right=team_map, left_on='teams.home.team.id', right_index=True)
     df_out = df_out.sort_values(by=['officialDate', 'sortOrder', 'league.id'], ascending=[False, True, True])[output_fields]
+    logging.info(f'generate_gbg_report returning report {len(df_out)} games')
     return df_out
 
 def write_report_out(df_out: pd.DataFrame, output_file: str) -> None:
@@ -56,6 +62,7 @@ def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
     for col in ['total_att', 'avg_att']:
         df_out[col] = df_out[col].astype(int)
     df_out = df_out.sort_values(by=['sortOrder', 'league.id', 'avg_att'], ascending=[True, True, False])[output_fields]
+    logging.info(f'generate_summary_report returning report {len(df_out)} teams')
     return df_out
 
 def main(season: int = 2022) -> None:
