@@ -47,6 +47,7 @@ def generate_gbg_report(gms: pd.DataFrame) -> pd.DataFrame:
     return df_out
 
 def write_report_out(df_out: pd.DataFrame, output_file: str) -> None:
+    logging.info(f'Writing report(s) to {output_file}')
     df_out.to_csv(output_file)
     df_out.to_html(f'{output_file}.html')
 
@@ -82,12 +83,11 @@ def generate_team_map(season: int = 2022) -> pd.DataFrame:
     logging.info(f'generate_team_map season={season} reporting {len(team_map)} teams')
     return team_map.sort_index()
 
-def main(season: int = 2022) -> None:
+def main(season: int = 2022, output_dir: str = './output') -> None:
     att = get_attendance_all_levels(season)
-    write_gbg_output(att, f'output/attendance_{season}.txt')    
-    write_summary_report(att, f'output/attendance_summary_{season}.txt')    
+    write_gbg_output(att, f'{output_dir}/attendance_{season}.txt')    
+    write_summary_report(att, f'{output_dir}/attendance_summary_{season}.txt')    
     
 
 if __name__ == "__main__":
-    
     typer.run(main) # typer will enable user to set the season from the command line with --season
