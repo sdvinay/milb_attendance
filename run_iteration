@@ -15,5 +15,10 @@ do
     ls -ltr output  # see the local output
     rsync -ahzi output/ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR} # sync
     ssh ${REMOTE_USER}@${REMOTE_HOST} ls -ltr ${REMOTE_DIR} # see the remote output
-    sleep $SLEEP_INTERVAL
+
+    # sleep (unless we're on the last loop)
+    if [ $i -lt $NUM_LOOPS ]; then 
+        echo sleeping $SLEEP_INTERVAL seconds
+        sleep $SLEEP_INTERVAL
+    fi
 done
