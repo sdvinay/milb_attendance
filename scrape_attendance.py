@@ -8,13 +8,19 @@ def get_schedule_url(sport_id: int, season: int = 2022) -> str:
     return f'https://statsapi.mlb.com/api/v1/schedule?language=en&sportId={sport_id}&season={season}&sortBy=gameDate&hydrate=gameInfo'
 
 
-def get_attendance_df(sport_id: int, season: int = 2022) -> pd.DataFrame:
+def get_attendance_sport_id(sport_id: int, season: int = 2022) -> pd.DataFrame:
     schedule_url = get_schedule_url(sport_id, season)
     schedule_data = requests.get(schedule_url).json()
     all_gms = pd.json_normalize(schedule_data['dates'], record_path=['games']).set_index('gamePk')
     played_gms = all_gms.dropna(subset=['isTie']).copy() # filter to include only completed/current games
 
     return played_gms
+
+def get_attendance_all_levels(season: int = 2022) -> pd.DataFrame:
+    # Each MILB level has its own sport_id, so iterate over them
+    milb_sport_ids = [11, 12, 13, 14, 23]
+    df = pd.concat([get_attendance_sport_id(id, season) for id in milb_sport_ids])
+    return df
 
 def write_gbg_output(gms: pd.DataFrame, output_file: str) -> None:
     df_out = generate_gbg_report(gms)
@@ -53,12 +59,11 @@ def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
     return df_out
 
 def main(season: int = 2022) -> None:
-    # Each MILB level has its own sport_id, so iterate over them
-    milb_sport_ids = [11, 12, 13, 14, 23]
-    att = pd.concat([get_attendance_df(id, season) for id in milb_sport_ids])
+    att = get_attendance_all_levels(season)
     write_gbg_output(att, f'output/attendance_{season}.txt')    
     write_summary_report(att, f'output/attendance_summary_{season}.txt')    
     
 
 if __name__ == "__main__":
+    
     typer.run(main) # typer will enable user to set the season from the command line with --season
