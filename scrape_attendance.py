@@ -17,6 +17,10 @@ def get_attendance_df(sport_id: int, season: int = 2022) -> pd.DataFrame:
     return played_gms
 
 def write_gbg_output(gms: pd.DataFrame, output_file: str) -> None:
+    df_out = generate_gbg_report(gms)
+    write_report_out(df_out, output_file)
+    
+def generate_gbg_report(gms: pd.DataFrame) -> pd.DataFrame:
     output_fields = ['officialDate','teams.home.team.name', 'abbreviation','league.name',
        'gameInfo.attendance', 'dayNight', 'dayOfWeek', 'teams.away.team.name']
 
@@ -27,10 +31,18 @@ def write_gbg_output(gms: pd.DataFrame, output_file: str) -> None:
     team_map = pd.read_csv('output/tm_to_league.csv').set_index('id')
     df_out = pd.merge(left=df_out, right=team_map, left_on='teams.home.team.id', right_index=True)
     df_out = df_out.sort_values(by=['officialDate', 'sortOrder', 'league.id'], ascending=[False, True, True])[output_fields]
+    return df_out
+
+def write_report_out(df_out: pd.DataFrame, output_file: str) -> None:
     df_out.to_csv(output_file)
     df_out.to_html(f'{output_file}.html')
 
 def write_summary_report(gms: pd.DataFrame, output_file: str) -> None:
+    df_out = generate_summary_report(gms)
+    write_report_out(df_out, output_file)
+
+
+def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
     output_fields = ['teams.home.team.name', 'abbreviation','league.name', 'num_games', 'total_att', 'avg_att']
     totals = gms.groupby(['teams.home.team.id', 'teams.home.team.name']).agg(num_games=('gameInfo.attendance', len), total_att=('gameInfo.attendance', sum),  avg_att=('gameInfo.attendance', np.mean))
     team_map = pd.read_csv('output/tm_to_league.csv').set_index('id')
@@ -38,8 +50,7 @@ def write_summary_report(gms: pd.DataFrame, output_file: str) -> None:
     for col in ['total_att', 'avg_att']:
         df_out[col] = df_out[col].astype(int)
     df_out = df_out.sort_values(by=['sortOrder', 'league.id', 'avg_att'], ascending=[True, True, False])[output_fields]
-    df_out.to_csv(output_file)
-    df_out.to_html(f'{output_file}.html')
+    return df_out
 
 def main(season: int = 2022) -> None:
     # Each MILB level has its own sport_id, so iterate over them
