@@ -69,14 +69,12 @@ def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
 
 # Merge the teams with league data to get additional information (level, sortOrder)
 def generate_team_map(season: int = 2022) -> pd.DataFrame:
-    # Common code to get the reference data (teams and sports/leagues)
+    # Common code to get the reference data (for each of teams and sports)
     def get_df(endpoint: str, cols: List[str]) -> pd.DataFrame:
         URL = f'https://statsapi.mlb.com/api/v1/{endpoint}?season={season}'
-        req = requests.get(URL).json()[endpoint]
-        df = pd.json_normalize(req).set_index('id')[cols]
-        return df
+        return pd.json_normalize(requests.get(URL).json()[endpoint]).set_index('id')[cols]
 
-    # Get the two reference DFs and merge them
+    # Get the two reference DFs (specifying which cols we need from each) and merge them
     tms = get_df('teams', ['name', 'league.name', 'league.id', 'sport.id'])
     levels = get_df('sports', ['abbreviation', 'sortOrder'])
     team_map = tms.merge(right=levels, left_on=['sport.id'], right_index=True)
