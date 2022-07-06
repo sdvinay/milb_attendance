@@ -1,6 +1,11 @@
 #!/bin/sh
 
-python ./scrape_attendance.py
-ls -ltr output
-rsync -ahzi output/ u35698910@home92388257.1and1-data.host:kumars/vinay/milb_attendance_data
-ssh u35698910@home92388257.1and1-data.host ls -ltr kumars/vinay/milb_attendance_data
+# configuration for the remote location
+REMOTE_USER=u35698910
+REMOTE_HOST=home92388257.1and1-data.host
+REMOTE_DIR=kumars/vinay/milb_attendance_data
+
+python ./scrape_attendance.py  # run the script
+ls -ltr output  # see the local output
+rsync -ahzi output/ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR} # sync
+ssh ${REMOTE_USER}@${REMOTE_HOST} ls -ltr ${REMOTE_DIR} # see the remote output
