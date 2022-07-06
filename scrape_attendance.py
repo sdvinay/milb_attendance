@@ -65,6 +65,18 @@ def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
     logging.info(f'generate_summary_report returning report {len(df_out)} teams')
     return df_out
 
+def generate_team_map(season: int = 2022) -> pd.DataFrame:
+    TEAMS_URL = f'https://statsapi.mlb.com/api/v1/teams?season={season}'
+    SPORTS_URL = f'https://statsapi.mlb.com/api/v1/sports?season={season}'
+
+    r_tms = requests.get(TEAMS_URL).json()['teams']
+    r_sports = requests.get(SPORTS_URL).json()['sports']
+    tms = pd.json_normalize(r_tms).set_index('id')[['name', 'league.name', 'league.id', 'sport.id']]
+    levels = pd.json_normalize(r_sports).set_index('id')[['abbreviation', 'sortOrder']]
+    team_map = tms.merge(right=levels, left_on=['sport.id'], right_index=True)
+    logging.info(f'generate_team_map season={season} reporting {len(team_map)} teams')
+    return team_map.sort_index()
+
 def main(season: int = 2022) -> None:
     att = get_attendance_all_levels(season)
     write_gbg_output(att, f'output/attendance_{season}.txt')    
