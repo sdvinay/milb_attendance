@@ -10,13 +10,14 @@ SLEEP_INTERVAL=3600
 
 for i in `seq $NUM_LOOPS`
 do
-    echo Running iteration $i
+    echo `date` Starting iteration $i
     python ./scrape_attendance.py  # run the script
     ls -ltr output  # see the local output
     rsync -ahzi output/ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR} # sync
     ssh ${REMOTE_USER}@${REMOTE_HOST} ls -ltr ${REMOTE_DIR} # see the remote output
+    echo `date` Finished iteration $i
 
-    # sleep (unless we're on the last loop)
+    # sleep (unless we're on the last iteration)
     if [ $i -lt $NUM_LOOPS ]; then 
         echo sleeping $SLEEP_INTERVAL seconds
         sleep $SLEEP_INTERVAL
