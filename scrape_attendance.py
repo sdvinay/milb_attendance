@@ -8,17 +8,15 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
 
-def get_schedule_url(sport_id: int, season: int = 2022) -> str:
-    return f'https://statsapi.mlb.com/api/v1/schedule?language=en&sportId={sport_id}&season={season}&sortBy=gameDate&hydrate=gameInfo'
+SCHEDULE_URL = 'https://statsapi.mlb.com/api/v1/schedule'
 
 
 def get_attendance_sport_id(sport_id: int, season: int = 2022) -> pd.DataFrame:
-    schedule_url = get_schedule_url(sport_id, season)
-    schedule_data = requests.get(schedule_url).json()
+    params = {'sportId': sport_id, 'season': season, 'hydrate': 'gameInfo'}
+    schedule_data = requests.get(SCHEDULE_URL, params).json()
     all_gms = pd.json_normalize(schedule_data['dates'], record_path=['games']).set_index('gamePk')
     played_gms = all_gms.dropna(subset=['isTie']).copy() # filter to include only completed/current games
     logging.info(f'get_attendance_sport_id sport_id={sport_id} season={season};  returning {len(played_gms)} games')
-
     return played_gms
 
 def get_attendance_all_levels(season: int = 2022) -> pd.DataFrame:
