@@ -16,7 +16,8 @@ SLEEP_INTERVAL=10
 for i in range(NUM_LOOPS):
     logging.info(f'Starting iteration {i}')
     sa.main()
-    # ls -ltr output  # see the local output
+    local_dir_listing = os.popen('ls -ltr output').read()  # see the local output
+    logging.info(local_dir_listing)
     # rsync -ahzi output/ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR} # sync
     # ssh ${REMOTE_USER}@${REMOTE_HOST} ls -ltr ${REMOTE_DIR} # see the remote output
     # echo `date` Finished iteration $i
