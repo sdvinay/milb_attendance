@@ -18,7 +18,8 @@ for i in range(NUM_LOOPS):
     sa.main()
     local_dir_listing = os.popen('ls -ltr output').read()  # see the local output
     logging.info(local_dir_listing)
-    # rsync -ahzi output/ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR} # sync
+    rsync_output = os.popen(f'rsync -ahzi output/ {REMOTE_USER}@{REMOTE_HOST}:{REMOTE_DIR}').read() # sync
+    logging.info(rsync_output)
     # ssh ${REMOTE_USER}@${REMOTE_HOST} ls -ltr ${REMOTE_DIR} # see the remote output
     # echo `date` Finished iteration $i
 
