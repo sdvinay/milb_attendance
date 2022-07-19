@@ -29,7 +29,7 @@ def run_iteration(i: int, num_loops: int):
     logging.info(f'Finished iteration {i}')
 
     # # sleep (unless we're on the last iteration)
-    if i < num_loops:
+    if i+1 < num_loops:
         logging.info(f'sleeping {SLEEP_INTERVAL} seconds')
         time.sleep(SLEEP_INTERVAL)
 
