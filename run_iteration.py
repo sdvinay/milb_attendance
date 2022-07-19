@@ -12,7 +12,7 @@ REMOTE_HOST='home92388257.1and1-data.host'
 REMOTE_DIR='kumars/vinay/milb_attendance_data'
 
 NUM_LOOPS_DEFAULT=1000
-SLEEP_INTERVAL=10
+SLEEP_INTERVAL_DEFAULT=3600
 
 def run_shell_command(cmd: str):
     logging.info(f'Running shell command: {cmd}')
@@ -20,7 +20,7 @@ def run_shell_command(cmd: str):
     logging.info(output)
     return output
 
-def run_iteration(i: int, num_loops: int):
+def run_iteration(i: int):
     logging.info(f'Starting iteration {i}')
     sa.main()
     run_shell_command('ls -ltr output') # see the local output
@@ -28,15 +28,15 @@ def run_iteration(i: int, num_loops: int):
     run_shell_command(f'ssh {REMOTE_USER}@{REMOTE_HOST} ls -ltr {REMOTE_DIR}') # see the remote output
     logging.info(f'Finished iteration {i}')
 
-    # # sleep (unless we're on the last iteration)
-    if i+1 < num_loops:
-        logging.info(f'sleeping {SLEEP_INTERVAL} seconds')
-        time.sleep(SLEEP_INTERVAL)
 
-def main(num_loops: int = NUM_LOOPS_DEFAULT):
+def main(num_loops: int = NUM_LOOPS_DEFAULT, sleep_interval: int = SLEEP_INTERVAL_DEFAULT):
+    logging.info(f'Script starting a run of {num_loops} iterations with a sleep interval of {sleep_interval}')
     for i in range(num_loops):
-        run_iteration(i, num_loops)
-
+        run_iteration(i)
+        # sleep (unless we're on the last iteration)
+        if i+1 < num_loops:
+            logging.info(f'sleeping {sleep_interval} seconds')
+            time.sleep(sleep_interval)
 
 if __name__ == "__main__":
-    typer.run(main) # typer will enable user to set the season from the command line with --season
+    typer.run(main)  # Allow overrides with --num-loops or --sleep-interval
