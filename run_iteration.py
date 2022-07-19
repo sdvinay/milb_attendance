@@ -1,6 +1,7 @@
 import os
 import time
 import logging
+import scrape_attendance as sa
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
@@ -14,7 +15,7 @@ SLEEP_INTERVAL=10
 
 for i in range(NUM_LOOPS):
     logging.info(f'Starting iteration {i}')
-#    python ./scrape_attendance.py  # run the script
+    sa.main()
     # ls -ltr output  # see the local output
     # rsync -ahzi output/ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR} # sync
     # ssh ${REMOTE_USER}@${REMOTE_HOST} ls -ltr ${REMOTE_DIR} # see the remote output
