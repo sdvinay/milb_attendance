@@ -25,7 +25,7 @@ def run_iteration(i: int, num_loops: int):
     sa.main()
     run_shell_command('ls -ltr output') # see the local output
     run_shell_command(f'rsync -ahzi output/ {REMOTE_USER}@{REMOTE_HOST}:{REMOTE_DIR}')  # sync
-    # ssh ${REMOTE_USER}@${REMOTE_HOST} ls -ltr ${REMOTE_DIR} # see the remote output
+    run_shell_command(f'ssh {REMOTE_USER}@{REMOTE_HOST} ls -ltr {REMOTE_DIR}') # see the remote output
     logging.info(f'Finished iteration {i}')
 
     # # sleep (unless we're on the last iteration)
