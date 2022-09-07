@@ -55,15 +55,15 @@ def write_summary_report(gms: pd.DataFrame, output_file: str) -> None:
 
 
 def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
-    output_fields = ['teams.home.team.name', 'abbreviation','league.name', 'num_games', 'total_att', 'avg_att', 'avg_duration']
+    output_fields = ['teams.home.team.name', 'abbreviation','league.name', 'num_games', 'total_att', 'avg_att', 'median_duration']
     totals = gms.groupby(['teams.home.team.id', 'teams.home.team.name']).agg(
         num_games=('gameInfo.attendance', len), 
         total_att=('gameInfo.attendance', sum),  
         avg_att=('gameInfo.attendance', np.mean),  
-        avg_duration=('gameInfo.gameDurationMinutes', np.mean))
+        median_duration=('gameInfo.gameDurationMinutes', np.median))
     team_map = pd.read_csv('output/tm_to_league.csv').set_index('id')
     df_out = pd.merge(left=totals.reset_index().set_index('teams.home.team.id'), right=team_map, left_index=True, right_index=True)
-    for col in ['total_att', 'avg_att', 'avg_duration']:
+    for col in ['total_att', 'avg_att', 'median_duration']:
         df_out[col] = df_out[col].astype(int)
     df_out = df_out.sort_values(by=['sortOrder', 'league.id', 'avg_att'], ascending=[True, True, False])[output_fields]
     logging.info(f'generate_summary_report returning report {len(df_out)} teams')
