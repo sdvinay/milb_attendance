@@ -56,7 +56,7 @@ def write_summary_report(gms: pd.DataFrame, output_file: str) -> None:
 
 def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
     output_fields = ['teams.home.team.name', 'abbreviation','league.name', 'num_games', 'total_att', 'avg_att', 'median_duration']
-    totals = gms.groupby(['teams.home.team.id', 'teams.home.team.name']).agg(
+    totals = gms.query('gameType=="R"').groupby(['teams.home.team.id', 'teams.home.team.name']).agg(
         num_games=('gameInfo.attendance', len), 
         total_att=('gameInfo.attendance', sum),  
         avg_att=('gameInfo.attendance', np.mean),  
