@@ -26,9 +26,6 @@ def get_attendance_all_levels(season: int = 2022) -> pd.DataFrame:
     logging.info(f'get_attendance_all_levels season={season};  returning {len(df)} games')
     return df
 
-def write_gbg_output(gms: pd.DataFrame, output_file: str) -> None:
-    df_out = generate_gbg_report(gms)
-    write_report_out(df_out, output_file)
     
 def generate_gbg_report(gms: pd.DataFrame) -> pd.DataFrame:
     output_fields = ['officialDate','teams.home.team.name', 'abbreviation','league.name',
@@ -48,10 +45,6 @@ def write_report_out(df_out: pd.DataFrame, output_file: str) -> None:
     logging.info(f'Writing report(s) to {output_file}')
     df_out.to_csv(output_file)
     df_out.to_html(f'{output_file}.html')
-
-def write_summary_report(gms: pd.DataFrame, output_file: str) -> None:
-    df_out = generate_summary_report(gms)
-    write_report_out(df_out, output_file)
 
 
 def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
@@ -85,8 +78,9 @@ def generate_team_map(season: int = 2022) -> pd.DataFrame:
 
 def main(season: int = 2022, output_dir: str = './output') -> None:
     att = get_attendance_all_levels(season)
-    write_gbg_output(att, f'{output_dir}/attendance_{season}.txt')    
-    write_summary_report(att, f'{output_dir}/attendance_summary_{season}.txt')    
+    write_report_out(generate_gbg_report(att), f'{output_dir}/attendance_{season}.txt')
+    write_report_out(generate_summary_report(att), f'{output_dir}/attendance_summary_{season}.txt')
+    return
     
 
 if __name__ == "__main__":
