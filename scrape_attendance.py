@@ -78,8 +78,9 @@ def generate_team_map(season: int = 2022) -> pd.DataFrame:
 
 def main(season: int = 2022, output_dir: str = './output') -> None:
     att = get_attendance_all_levels(season)
-    write_report_out(generate_gbg_report(att), f'{output_dir}/attendance_{season}.txt')
-    write_report_out(generate_summary_report(att), f'{output_dir}/attendance_summary_{season}.txt')
+    reports = {'attendance': generate_gbg_report, 'attendance_summary': generate_summary_report}
+    for (report_name, report_func) in reports.items():
+        write_report_out(report_func(att), f'{output_dir}/{report_name}_{season}.txt')
     return
     
 
