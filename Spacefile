@@ -9,3 +9,5 @@ micros:
       - main.py
       - scrape_attendance.py
       - tm_to_league.csv
+    public_routes:
+      - '*'
