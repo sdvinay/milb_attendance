@@ -16,3 +16,10 @@ def generate_summary_report(season: int = 2022) -> HTMLResponse:
     df = sa.generate_summary_report(att)
     html = df.to_html()
     return HTMLResponse(content=html)
+
+@app.get("/gbg_report", response_class=HTMLResponse)
+def generate_gbg_report(season: int = 2022) -> HTMLResponse:
+    att = sa.get_attendance_all_levels(season)
+    df = sa.generate_gbg_report(att)
+    html = df.to_html()
+    return HTMLResponse(content=html)
