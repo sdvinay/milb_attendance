@@ -35,7 +35,7 @@ def generate_gbg_report(gms: pd.DataFrame) -> pd.DataFrame:
     df_out['dayOfWeek'] = pd.to_datetime(df_out['officialDate']).dt.day_name()
     df_out['gameInfo.attendance'] = df_out['gameInfo.attendance'].fillna(0).apply(int)
 
-    team_map = pd.read_csv('output/tm_to_league.csv').set_index('id')
+    team_map = pd.read_csv('tm_to_league.csv').set_index('id')
     df_out = pd.merge(left=df_out, right=team_map, left_on='teams.home.team.id', right_index=True)
     df_out = df_out.sort_values(by=['officialDate', 'sortOrder', 'league.id'], ascending=[False, True, True])[output_fields]
     logging.info(f'generate_gbg_report returning report {len(df_out)} games')
@@ -54,7 +54,7 @@ def generate_summary_report(gms: pd.DataFrame) -> pd.DataFrame:
         total_att=('gameInfo.attendance', sum),  
         avg_att=('gameInfo.attendance', np.mean),  
         median_duration=('gameInfo.gameDurationMinutes', np.median))
-    team_map = pd.read_csv('output/tm_to_league.csv').set_index('id')
+    team_map = pd.read_csv('tm_to_league.csv').set_index('id')
     df_out = pd.merge(left=totals.reset_index().set_index('teams.home.team.id'), right=team_map, left_index=True, right_index=True)
     for col in ['total_att', 'avg_att', 'median_duration']:
         df_out[col] = df_out[col].astype(int)

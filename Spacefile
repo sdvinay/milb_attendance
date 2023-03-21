@@ -5,3 +5,7 @@ micros:
     src: .
     engine: python3.9
     primary: true
+    include:
+      - main.py
+      - scrape_attendance.py
+      - tm_to_league.csv

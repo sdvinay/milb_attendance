@@ -1,0 +1,664 @@
+id,name,league.name,league.id,sport.id,abbreviation,sortOrder
+100,Georgia Tech Yellow Jackets,College Baseball,107.0,22,College,5101
+101,Florida State Seminoles,College Baseball,107.0,22,College,5101
+102,Round Rock Express,Pacific Coast League,112.0,11,AAA,101
+103,Lake Elsinore Storm,California League,110.0,14,A,401
+105,Sacramento River Cats,Pacific Coast League,112.0,11,AAA,101
+106,Erie SeaWolves,Eastern League,113.0,12,AA,201
+108,Los Angeles Angels,American League,103.0,1,MLB,11
+109,Arizona Diamondbacks,National League,104.0,1,MLB,11
+110,Baltimore Orioles,American League,103.0,1,MLB,11
+111,Boston Red Sox,American League,103.0,1,MLB,11
+112,Chicago Cubs,National League,104.0,1,MLB,11
+113,Cincinnati Reds,National League,104.0,1,MLB,11
+114,Cleveland Guardians,American League,103.0,1,MLB,11
+115,Colorado Rockies,National League,104.0,1,MLB,11
+116,Detroit Tigers,American League,103.0,1,MLB,11
+117,Houston Astros,American League,103.0,1,MLB,11
+118,Kansas City Royals,American League,103.0,1,MLB,11
+119,Los Angeles Dodgers,National League,104.0,1,MLB,11
+120,Washington Nationals,National League,104.0,1,MLB,11
+121,New York Mets,National League,104.0,1,MLB,11
+133,Oakland Athletics,American League,103.0,1,MLB,11
+134,Pittsburgh Pirates,National League,104.0,1,MLB,11
+135,San Diego Padres,National League,104.0,1,MLB,11
+136,Seattle Mariners,American League,103.0,1,MLB,11
+137,San Francisco Giants,National League,104.0,1,MLB,11
+138,St. Louis Cardinals,National League,104.0,1,MLB,11
+139,Tampa Bay Rays,American League,103.0,1,MLB,11
+140,Texas Rangers,American League,103.0,1,MLB,11
+141,Toronto Blue Jays,American League,103.0,1,MLB,11
+142,Minnesota Twins,American League,103.0,1,MLB,11
+143,Philadelphia Phillies,National League,104.0,1,MLB,11
+144,Atlanta Braves,National League,104.0,1,MLB,11
+145,Chicago White Sox,American League,103.0,1,MLB,11
+146,Miami Marlins,National League,104.0,1,MLB,11
+147,New York Yankees,American League,103.0,1,MLB,11
+158,Milwaukee Brewers,National League,104.0,1,MLB,11
+226,Georgia Bulldogs,College Baseball,107.0,22,College,5101
+227,Boston College Eagles,College Baseball,107.0,22,College,5101
+232,Arizona Wildcats,College Baseball,107.0,22,College,5101
+233,Charleston RiverDogs,Carolina League,122.0,14,A,401
+234,Durham Bulls,International League,117.0,11,AAA,101
+235,Memphis Redbirds,International League,117.0,11,AAA,101
+236,Miami Hurricanes,College Baseball,107.0,22,College,5101
+237,Midland RockHounds,Texas League,109.0,12,AA,201
+238,Oklahoma City Dodgers,Pacific Coast League,112.0,11,AAA,101
+241,Yomiuri Giants,Japan All-Star Series,420.0,51,INT,3501
+245,Texas Longhorns,College Baseball,107.0,22,College,5101
+247,Birmingham Barons,Southern League,111.0,12,AA,201
+249,Carolina Mudcats,Carolina League,122.0,14,A,401
+259,Fresno Grizzlies,California League,110.0,14,A,401
+260,Tulsa Drillers,Texas League,109.0,12,AA,201
+279,Palm Beach Cardinals,Florida State League,123.0,14,A,401
+342,Albuquerque Isotopes,Pacific Coast League,112.0,11,AAA,101
+343,Northeastern Huskies,College Baseball,107.0,22,College,5101
+400,Las Vegas Aviators,Pacific Coast League,112.0,11,AAA,101
+401,Inland Empire 66ers,California League,110.0,14,A,401
+402,Akron RubberDucks,Eastern League,113.0,12,AA,201
+403,Everett AquaSox,Northwest League,126.0,13,A+,301
+404,ACL Angels,Arizona Complex League,121.0,16,ROK,701
+406,ACL Brewers Gold,Arizona Complex League,121.0,16,ROK,701
+407,ACL Cubs,Arizona Complex League,121.0,16,ROK,701
+408,ACL Giants Black,Arizona Complex League,121.0,16,ROK,701
+409,ACL Mariners,Arizona Complex League,121.0,16,ROK,701
+410,ACL Padres,Arizona Complex League,121.0,16,ROK,701
+411,ACL Rangers,Arizona Complex League,121.0,16,ROK,701
+412,ACL Royals Blue,Arizona Complex League,121.0,16,ROK,701
+413,Greeneville Flyboys,Appalachian League,120.0,22,College,5101
+414,Salem Red Sox,Carolina League,122.0,14,A,401
+415,San Diego State Aztecs,College Baseball,107.0,22,College,5101
+416,Louisville Bats,International League,117.0,11,AAA,101
+418,Bowie Baysox,Eastern League,113.0,12,AA,201
+419,Hillsboro Hops,Northwest League,126.0,13,A+,301
+421,Montgomery Biscuits,Southern League,111.0,12,AA,201
+422,Buffalo Bisons,International League,117.0,11,AAA,101
+424,Dunedin Blue Jays,Florida State League,123.0,14,A,401
+425,Pulaski River Turtles,Appalachian League,120.0,22,College,5101
+426,Wilmington Blue Rocks,South Atlantic League,116.0,13,A+,301
+427,Jersey Shore BlueClaws,South Atlantic League,116.0,13,A+,301
+428,Greenville Drive,South Atlantic League,116.0,13,A+,301
+429,Danville Otterbots,Appalachian League,120.0,22,College,5101
+430,Mississippi Braves,Southern League,111.0,12,AA,201
+431,Gwinnett Stripers,International League,117.0,11,AAA,101
+432,Rome Braves,South Atlantic League,116.0,13,A+,301
+434,Bravos de Leon,Mexican League,125.0,23,IND,2101
+435,Vancouver Canadians,Northwest League,126.0,13,A+,301
+436,Fredericksburg Nationals,Carolina League,122.0,14,A,401
+437,Lake County Captains,Midwest League,118.0,13,A+,301
+438,Johnson City Doughboys,Appalachian League,120.0,22,College,5101
+440,Springfield Cardinals,Texas League,109.0,12,AA,201
+442,Olmecas de Tabasco,Mexican League,125.0,23,IND,2101
+443,Peoria Chiefs,Midwest League,118.0,13,A+,301
+444,Idaho Falls Chukars,Pioneer League,128.0,23,IND,2101
+445,Columbus Clippers,International League,117.0,11,AAA,101
+447,Algodoneros Union Laguna,Mexican League,125.0,23,IND,2101
+448,Hickory Crawdads,South Atlantic League,116.0,13,A+,301
+449,Williamsport Crosscutters,MLB Draft League,5536.0,22,College,5101
+450,Daytona Tortugas,Florida State League,123.0,14,A,401
+451,Iowa Cubs,International League,117.0,11,AAA,101
+452,Altoona Curve,Eastern League,113.0,12,AA,201
+453,Brooklyn Cyclones,South Atlantic League,116.0,13,A+,301
+454,Glendale Desert Dogs,Arizona Fall League,119.0,17,WIN,1301
+455,Princeton Whistlepigs,Appalachian League,120.0,22,College,5101
+456,Great Lakes Loons,Midwest League,118.0,13,A+,301
+459,Dayton Dragons,Midwest League,118.0,13,A+,301
+460,Tri-City Dust Devils,Northwest League,126.0,13,A+,301
+461,Eugene Emeralds,Northwest League,126.0,13,A+,301
+463,New Hampshire Fisher Cats,Eastern League,113.0,12,AA,201
+464,FCL Braves,Florida Complex League,124.0,16,ROK,701
+466,FCL Nationals,Florida Complex League,124.0,16,ROK,701
+467,FCL Marlins,Florida Complex League,124.0,16,ROK,701
+468,FCL Mets,Florida Complex League,124.0,16,ROK,701
+469,FCL Phillies,Florida Complex League,124.0,16,ROK,701
+470,FCL Pirates,Florida Complex League,124.0,16,ROK,701
+471,FCL Red Sox,Florida Complex League,124.0,16,ROK,701
+473,FCL Tigers,Florida Complex League,124.0,16,ROK,701
+474,FCL Twins,Florida Complex League,124.0,16,ROK,701
+475,FCL Yankees,Florida Complex League,124.0,16,ROK,701
+476,San Jose Giants,California League,110.0,14,A,401
+477,Greensboro Grasshoppers,South Atlantic League,116.0,13,A+,301
+478,Augusta GreenJackets,Carolina League,122.0,14,A,401
+479,Jupiter Hammerheads,Florida State League,123.0,14,A,401
+480,Boise Hawks,Pioneer League,128.0,23,IND,2101
+481,Lynchburg Hillcats,Carolina League,122.0,14,A,401
+482,Corpus Christi Hooks,Texas League,109.0,12,AA,201
+483,Burlington Sock Puppets,Appalachian League,120.0,22,College,5101
+484,Indianapolis Indians,International League,117.0,11,AAA,101
+485,Down East Wood Ducks,Carolina League,122.0,14,A,401
+486,Spokane Indians,Northwest League,126.0,13,A+,301
+487,Kannapolis Cannon Ballers,Carolina League,122.0,14,A,401
+488,Aberdeen IronBirds,South Atlantic League,116.0,13,A+,301
+490,Peoria Javelinas,Arizona Fall League,119.0,17,WIN,1301
+492,Cedar Rapids Kernels,Midwest League,118.0,13,A+,301
+493,Frederick Keys,MLB Draft League,5536.0,22,College,5101
+494,Charlotte Knights,International League,117.0,11,AAA,101
+495,Lexington Legends,Atlantic League,436.0,23,IND,2101
+496,Leones de Yucatan,Mexican League,125.0,23,IND,2101
+498,Chattanooga Lookouts,Southern League,111.0,12,AA,201
+499,Lansing Lugnuts,Midwest League,118.0,13,A+,301
+502,Saraperos de Saltillo,Mexican League,125.0,23,IND,2101
+505,Binghamton Rumble Ponies,Eastern League,113.0,12,AA,201
+506,Kingsport Axmen,Appalachian League,120.0,22,College,5101
+507,St. Lucie Mets,Florida State League,123.0,14,A,401
+508,Navy Midshipmen,College Baseball,107.0,22,College,5101
+509,Fort Myers Mighty Mussels,Florida State League,123.0,14,A,401
+510,San Antonio Missions,Texas League,109.0,12,AA,201
+512,Toledo Mud Hens,International League,117.0,11,AAA,101
+513,Billings Mustangs,Pioneer League,128.0,23,IND,2101
+515,Modesto Nuts,California League,110.0,14,A,401
+516,Visalia Rawhide,California League,110.0,14,A,401
+517,Bluefield Ridge Runners,Appalachian League,120.0,22,College,5101
+518,Missoula PaddleHeads,Pioneer League,128.0,23,IND,2101
+520,Pericos de Puebla,Mexican League,125.0,23,IND,2101
+521,Myrtle Beach Pelicans,Carolina League,122.0,14,A,401
+522,Reading Fightin Phils,Eastern League,113.0,12,AA,201
+523,Piratas de Campeche,Mexican League,125.0,23,IND,2101
+524,Stockton Ports,California League,110.0,14,A,401
+525,Charleston Dirty Birds,Atlantic League,436.0,23,IND,2101
+526,Rancho Cucamonga Quakes,California League,110.0,14,A,401
+527,Salt River Rafters,Arizona Fall League,119.0,17,WIN,1301
+528,Rieleros de Aguascalientes,Mexican League,125.0,23,IND,2101
+529,Tacoma Rainiers,Pacific Coast League,112.0,11,AAA,101
+530,Ogden Raptors,Pioneer League,128.0,23,IND,2101
+531,Scranton/Wilkes-Barre RailRiders,International League,117.0,11,AAA,101
+532,Diablos Rojos del Mexico,Mexican League,125.0,23,IND,2101
+533,Worcester Red Sox,International League,117.0,11,AAA,101
+534,Rochester Red Wings,International League,117.0,11,AAA,101
+536,Tecolotes de los Dos Laredos,Mexican League,125.0,23,IND,2101
+537,Hudson Valley Renegades,South Atlantic League,116.0,13,A+,301
+538,Hartford Yard Goats,Eastern League,113.0,12,AA,201
+540,Frisco RoughRiders,Texas League,109.0,12,AA,201
+541,Omaha Storm Chasers,International League,117.0,11,AAA,101
+542,Surprise Saguaros,Arizona Fall League,119.0,17,WIN,1301
+544,Scottsdale Scorpions,Arizona Fall League,119.0,17,WIN,1301
+545,Mahoning Valley Scrappers,MLB Draft League,5536.0,22,College,5101
+546,Portland Sea Dogs,Eastern League,113.0,12,AA,201
+547,Harrisburg Senators,Eastern League,113.0,12,AA,201
+548,Delmarva Shorebirds,Carolina League,122.0,14,A,401
+550,South Bend Cubs,Midwest League,118.0,13,A+,301
+551,Rocky Mountain Vibes,Pioneer League,128.0,23,IND,2101
+552,Syracuse Mets,International League,117.0,11,AAA,101
+553,Tennessee Smokies,Southern League,111.0,12,AA,201
+554,Beloit Sky Carp,Midwest League,118.0,13,A+,301
+555,Mesa Solar Sox,Arizona Fall League,119.0,17,WIN,1301
+556,Nashville Sounds,International League,117.0,11,AAA,101
+557,Bristol State Liners,Appalachian League,120.0,22,College,5101
+559,Rocket City Trash Pandas,Southern League,111.0,12,AA,201
+560,Acereros del Norte,Mexican League,125.0,23,IND,2101
+561,Salt Lake Bees,Pacific Coast League,112.0,11,AAA,101
+562,Sultanes de Monterrey,Mexican League,125.0,23,IND,2101
+564,Jacksonville Jumbo Shrimp,International League,117.0,11,AAA,101
+565,Quad Cities River Bandits,Midwest League,118.0,13,A+,301
+566,Clearwater Threshers,Florida State League,123.0,14,A,401
+567,Trenton Thunder,MLB Draft League,5536.0,22,College,5101
+568,Norfolk Tides,International League,117.0,11,AAA,101
+569,Tigres de Quintana Roo,Mexican League,125.0,23,IND,2101
+570,Lakeland Flying Tigers,Florida State League,123.0,14,A,401
+572,Wisconsin Timber Rattlers,Midwest League,118.0,13,A+,301
+573,Asheville Tourists,South Atlantic League,116.0,13,A+,301
+574,Arkansas Travelers,Texas League,109.0,12,AA,201
+576,Elizabethton River Riders,Appalachian League,120.0,22,College,5101
+579,Guerreros de Oaxaca,Mexican League,125.0,23,IND,2101
+580,Winston-Salem Dash,South Atlantic League,116.0,13,A+,301
+581,Great Falls Voyagers,Pioneer League,128.0,23,IND,2101
+582,West Michigan Whitecaps,Midwest League,118.0,13,A+,301
+584,Fort Wayne TinCaps,Midwest League,118.0,13,A+,301
+586,Staten Island Ferry Hawks,Atlantic League,436.0,23,IND,2101
+587,Tampa Tarpons,Florida State League,123.0,14,A,401
+599,FCL Orioles,Florida Complex League,124.0,16,ROK,701
+600,DSL Angels,Dominican Summer League,130.0,16,ROK,701
+601,DSL Astros Blue,Dominican Summer League,130.0,16,ROK,701
+602,DSL Athletics,Dominican Summer League,130.0,16,ROK,701
+604,DSL Blue Jays,Dominican Summer League,130.0,16,ROK,701
+605,DSL Braves,Dominican Summer League,130.0,16,ROK,701
+607,DSL Brewers1,Dominican Summer League,130.0,16,ROK,701
+608,DSL Cardinals Blue,Dominican Summer League,130.0,16,ROK,701
+609,DSL Cubs Blue,Dominican Summer League,130.0,16,ROK,701
+610,DSL D-backs1,Dominican Summer League,130.0,16,ROK,701
+611,DSL Dodgers Bautista,Dominican Summer League,130.0,16,ROK,701
+612,DSL Dodgers Mega,Dominican Summer League,130.0,16,ROK,701
+615,DSL Giants Orange,Dominican Summer League,130.0,16,ROK,701
+616,DSL Guardians Blue,Dominican Summer League,130.0,16,ROK,701
+618,DSL Mariners,Dominican Summer League,130.0,16,ROK,701
+619,DSL Marlins,Dominican Summer League,130.0,16,ROK,701
+620,DSL Mets1,Dominican Summer League,130.0,16,ROK,701
+621,DSL Orioles1,Dominican Summer League,130.0,16,ROK,701
+622,DSL Padres,Dominican Summer League,130.0,16,ROK,701
+623,DSL Phillies Red,Dominican Summer League,130.0,16,ROK,701
+624,DSL Pirates Black,Dominican Summer League,130.0,16,ROK,701
+625,DSL Rangers1,Dominican Summer League,130.0,16,ROK,701
+626,DSL Red Sox Blue,Dominican Summer League,130.0,16,ROK,701
+627,DSL Red Sox Red,Dominican Summer League,130.0,16,ROK,701
+628,DSL Reds,Dominican Summer League,130.0,16,ROK,701
+629,DSL Rockies,Dominican Summer League,130.0,16,ROK,701
+630,DSL Royals Glass,Dominican Summer League,130.0,16,ROK,701
+631,DSL Tigers,Dominican Summer League,130.0,16,ROK,701
+632,DSL Twins,Dominican Summer League,130.0,16,ROK,701
+633,DSL White Sox,Dominican Summer League,130.0,16,ROK,701
+634,DSL Yankees1,Dominican Summer League,130.0,16,ROK,701
+635,DSL Yankees2,Dominican Summer League,130.0,16,ROK,701
+667,Aguilas Cibaenas,Liga de Beisbol Dominicano,131.0,17,WIN,1301
+668,Toros del Este,Liga de Beisbol Dominicano,131.0,17,WIN,1301
+669,Estrellas Orientales,Liga de Beisbol Dominicano,131.0,17,WIN,1301
+670,Gigantes del Cibao,Liga de Beisbol Dominicano,131.0,17,WIN,1301
+671,Leones del Escogido,Liga de Beisbol Dominicano,131.0,17,WIN,1301
+672,Tigres del Licey,Liga de Beisbol Dominicano,131.0,17,WIN,1301
+673,Aguilas de Mexicali,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+674,Charros de Jalisco,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+675,Caneros de los Mochis,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+676,Mayos de Navojoa,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+677,Naranjeros de Hermosillo,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+678,Tomateros de Culiacan,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+679,Venados de Mazatlan,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+680,Yaquis de Obregon,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+685,Cangrejeros de Santurce,Liga de Beisbol Profesional Roberto Clemente,133.0,17,WIN,1301
+686,Criollos de Caguas,Liga de Beisbol Profesional Roberto Clemente,133.0,17,WIN,1301
+687,Gigantes de Carolina,Liga de Beisbol Profesional Roberto Clemente,133.0,17,WIN,1301
+688,Indios de Mayaguez,Liga de Beisbol Profesional Roberto Clemente,133.0,17,WIN,1301
+690,Puerto Rico,Caribbean Series,162.0,17,WIN,1301
+692,Aguilas del Zulia,Liga Venezuela Beisbol Profesional,135.0,17,WIN,1301
+693,Cardenales de Lara,Liga Venezuela Beisbol Profesional,135.0,17,WIN,1301
+694,Caribes de Anzoategui,Liga Venezuela Beisbol Profesional,135.0,17,WIN,1301
+695,Leones del Caracas,Liga Venezuela Beisbol Profesional,135.0,17,WIN,1301
+696,Navegantes del Magallanes,Liga Venezuela Beisbol Profesional,135.0,17,WIN,1301
+697,Bravos de Margarita,Liga Venezuela Beisbol Profesional,135.0,17,WIN,1301
+698,Tiburones de La Guaira,Liga Venezuela Beisbol Profesional,135.0,17,WIN,1301
+699,Tigres de Aragua,Liga Venezuela Beisbol Profesional,135.0,17,WIN,1301
+776,Brazil,World Baseball Classic Qualifiers,159.0,51,INT,3501
+784,Canada,International Competition,580.0,51,INT,3501
+792,Colombia,International Competition,580.0,51,INT,3501
+798,Cuba,International Competition,580.0,51,INT,3501
+800,Czech Republic,World Baseball Classic Qualifiers,159.0,51,INT,3501
+805,Dominican Republic,International Competition,580.0,51,INT,3501
+815,France,World Baseball Classic Qualifiers,159.0,51,INT,3501
+819,Germany,World Baseball Classic Qualifiers,159.0,51,INT,3501
+821,Great Britain,World Baseball Classic Qualifiers,159.0,51,INT,3501
+880,New Zealand,World Baseball Classic Qualifiers,159.0,51,INT,3501
+881,Nicaragua,International Competition,580.0,51,INT,3501
+887,Pakistan,World Baseball Classic Qualifiers,159.0,51,INT,3501
+890,Panama,World Baseball Classic Qualifiers,159.0,51,INT,3501
+894,Philippines,World Baseball Classic Qualifiers,159.0,51,INT,3501
+897,Puerto Rico,International Competition,580.0,51,INT,3501
+918,South Africa,World Baseball Classic Qualifiers,159.0,51,INT,3501
+920,Spain,World Baseball Classic Qualifiers,159.0,51,INT,3501
+930,Thailand,World Baseball Classic Qualifiers,159.0,51,INT,3501
+940,United States,International Competition,580.0,51,INT,3501
+944,Venezuela,International Competition,580.0,51,INT,3501
+1174,State College Spikes,MLB Draft League,5536.0,22,College,5101
+1191,Dominican Republic,Caribbean Series,162.0,17,WIN,1301
+1192,Mexico,Caribbean Series,162.0,17,WIN,1301
+1193,Venezuela,Caribbean Series,162.0,17,WIN,1301
+1234,Monroe (NC) Channel Cats,College Baseball,107.0,22,College,5101
+1270,DSL Nationals,Dominican Summer League,130.0,16,ROK,701
+1350,Northwest Arkansas Naturals,Texas League,109.0,12,AA,201
+1370,FCL Cardinals,Florida Complex League,124.0,16,ROK,701
+1390,FCL Blue Jays,Florida Complex League,124.0,16,ROK,701
+1410,Lehigh Valley IronPigs,International League,117.0,11,AAA,101
+1551,Michigan State Spartans,College Baseball,107.0,22,College,5101
+1552,WVU Tech Golden Bears,College Baseball,107.0,22,College,5101
+1570,UNC Asheville Bulldogs,College Baseball,107.0,22,College,5101
+1611,DSL Rays,Dominican Summer League,130.0,16,ROK,701
+1858,Windy City ThunderBolts,Frontier League,442.0,23,IND,2101
+1868,Evansville Otters,Frontier League,442.0,23,IND,2101
+1869,Fargo-Moorehead Redhawks,Northern League,450.0,23,IND,2101
+1871,Florence Freedom,Frontier League,442.0,23,IND,2101
+1874,Gary RailCats,Northern League,450.0,23,IND,2101
+1875,Gateway Grizzlies,Frontier League,442.0,23,IND,2101
+1883,Joliet JackHammers,Northern League,450.0,23,IND,2101
+1885,Kansas City T-Bones,Northern League,450.0,23,IND,2101
+1889,Lancaster Barnstormers,Atlantic League,436.0,23,IND,2101
+1892,Lincoln Saltdogs,Northern League,450.0,23,IND,2101
+1896,Long Island Ducks,Atlantic League,436.0,23,IND,2101
+1916,New Jersey Jackals,Canadian-American Association,439.0,23,IND,2101
+1932,Quebec Capitales,Canadian-American Association,439.0,23,IND,2101
+1950,Schaumburg Flyers,Northern League,450.0,23,IND,2101
+1953,Sioux City Explorers,Northern League,450.0,23,IND,2101
+1954,Sioux Falls Canaries,Northern League,450.0,23,IND,2101
+1956,Somerset Patriots,Eastern League,113.0,12,AA,201
+1960,St. Paul Saints,International League,117.0,11,AAA,101
+1964,Sussex Skyhawks,Canadian-American Association,439.0,23,IND,2101
+1971,Trois-Rivieres Saints,Canadian Baseball League,440.0,23,IND,2101
+1978,Washington Wild Things,Frontier League,442.0,23,IND,2101
+1982,Winnipeg Goldeyes,Northern League,450.0,23,IND,2101
+1991,ACL D-backs,Arizona Complex League,121.0,16,ROK,701
+1994,ACL Rockies,Arizona Complex League,121.0,16,ROK,701
+1997,ACL White Sox,Arizona Complex League,121.0,16,ROK,701
+1998,FCL Astros Blue,Florida Complex League,124.0,16,ROK,701
+2000,FCL Astros Orange,Florida Complex League,124.0,16,ROK,701
+2003,FCL Rays,Florida Complex League,124.0,16,ROK,701
+2101,DSL Brewers2,Dominican Summer League,130.0,16,ROK,701
+2117,DSL Mets2,Dominican Summer League,130.0,16,ROK,701
+2127,DSL Miami,Dominican Summer League,130.0,16,ROK,701
+2128,DSL Royals Stewart,Dominican Summer League,130.0,16,ROK,701
+2131,DSL Colorado,Dominican Summer League,130.0,16,ROK,701
+2132,DSL Tigers2,Dominican Summer League,130.0,16,ROK,701
+2134,DSL Giants Black,Dominican Summer League,130.0,16,ROK,701
+2270,DSL Cubs Red,Dominican Summer League,130.0,16,ROK,701
+2290,Michigan Wolverines,College Baseball,107.0,22,College,5101
+2291,University of St. Louis Billikens,College Baseball,107.0,22,College,5101
+2292,South Florida Bulls,College Baseball,107.0,22,College,5101
+2293,Virginia Tech Hokies,College Baseball,107.0,22,College,5101
+2310,Reno Aces,Pacific Coast League,112.0,11,AAA,101
+2330,Georgetown Hoyas,College Baseball,107.0,22,College,5101
+2350,Texas Tech Red Raiders,College Baseball,107.0,22,College,5101
+2351,Tennessee Volunteers,College Baseball,107.0,22,College,5101
+2352,Rice Owls,College Baseball,107.0,22,College,5101
+2370,Walters State Senators,College Baseball,107.0,22,College,5101
+2390,Embry-Riddle Eagles,College Baseball,107.0,22,College,5101
+2413,DSL Rangers2,Dominican Summer League,130.0,16,ROK,701
+2473,China,,,508,INTC,3502
+2474,Chinese Taipei,,,508,INTC,3502
+2475,Columbia Blowfish,,,508,INTC,3502
+2476,Cuba,,,508,INTC,3502
+2477,Czech Republic,,,508,INTC,3502
+2478,Fayetteville Swampdogs,,,508,INTC,3502
+2479,Germany,,,508,INTC,3502
+2480,Holyoke Sox,,,508,INTC,3502
+2481,Japan,,,508,INTC,3502
+2482,Keene Swamp Bats,,,508,INTC,3502
+2483,Martinsville Mustangs,,,508,INTC,3502
+2484,Netherlands,,,508,INTC,3502
+2485,Netherlands Antilles,,,508,INTC,3502
+2486,Newport Gulls,,,508,INTC,3502
+2487,North Adams SteepleCats,,,508,INTC,3502
+2488,North Shore Navigators,,,508,INTC,3502
+2489,Pittsfield Dukes,,,508,INTC,3502
+2490,Torrington Twisters,,,508,INTC,3502
+2495,USA Baseball 16U National Team,,,510,16U,3505
+2498,Bowling Green Hot Rods,South Atlantic League,116.0,13,A+,301
+2510,Canada,,,508,INTC,3502
+2512,Korea,,,508,INTC,3502
+2513,Lithuania,,,508,INTC,3502
+2577,Australia,,,509,18U,3503
+2578,Canada Jr. Team,International Baseball (18U),523.0,509,18U,3503
+2579,Chinese Taipei,,,509,18U,3503
+2580,Korea,,,509,18U,3503
+2581,Mexico,,,509,18U,3503
+2582,Netherlands,,,509,18U,3503
+2583,Okotoks Dawgs,,,509,18U,3503
+2584,Russia,,,509,18U,3503
+2588,Puerto Rico,,,509,18U,3503
+2650,Aruba,,,510,16U,3505
+2651,Brazil,,,510,16U,3505
+2652,Cuba,,,510,16U,3505
+2653,Guatemala,,,510,16U,3505
+2654,Mexico,,,510,16U,3505
+2655,Panama,,,510,16U,3505
+2656,Puerto Rico,,,510,16U,3505
+2657,Venezuela,,,510,16U,3505
+2671,Nippon Ham Fighters,Japan All-Star Series,420.0,51,INT,3501
+3030,Houston Cougars,College Baseball,107.0,22,College,5101
+3032,Texas A&M Aggies,College Baseball,107.0,22,College,5101
+3033,Baylor Bears,College Baseball,107.0,22,College,5101
+3110,Washington Huskies,College Baseball,107.0,22,College,5101
+3111,Oregon State Beavers,College Baseball,107.0,22,College,5101
+3130,DSL Orioles2,Dominican Summer League,130.0,16,ROK,701
+3175,NECBL All-Stars,,,508,INTC,3502
+3176,Kokusai Budo University,,,508,INTC,3502
+3177,Bahamas,,,508,INTC,3502
+3178,USA-Reno,,,508,INTC,3502
+3179,Prince George Axemen,,,508,INTC,3502
+3190,Australia,,,510,16U,3505
+3191,Brazil,,,509,18U,3503
+3192,Chinese Taipei,,,510,16U,3505
+3193,Colombia,,,509,18U,3503
+3194,Colombia,,,510,16U,3505
+3196,Czech Republic,,,510,16U,3505
+3198,Guatemala,,,508,INTC,3502
+3199,Japan,,,510,16U,3505
+3200,Korea,,,510,16U,3505
+3201,Netherlands,,,510,16U,3505
+3202,Panama,,,509,18U,3503
+3203,Russia,,,510,16U,3505
+3204,South Africa,,,510,16U,3505
+3205,Venezuela,,,509,18U,3503
+3231,Croatia,,,508,INTC,3502
+3250,Angels Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3252,Astros Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3254,Athletics Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3256,Blue Jays Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3258,Braves Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3260,Brewers Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3262,Cardinals Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3264,Cubs Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3266,Diamondbacks Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3268,Dodgers Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3270,Giants Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3272,Indians Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3274,Mariners Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3276,Marlins Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3278,Mets Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3280,Nationals Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3282,Orioles Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3284,Padres Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3286,Phillies Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3288,Pirates Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3290,Rangers Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3292,Rays Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3294,Red Sox Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3296,Reds Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3298,Rockies Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3300,Royals Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3302,Tigers Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3304,Twins Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3306,White Sox Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3308,Yankees Alternate Training Site,Extended Spring Training,5468.0,21,Minors,1402
+3330,Louisburg College Hurricanes,College Baseball,107.0,22,College,5101
+3331,Pitt Community College Bulldogs,College Baseball,107.0,22,College,5101
+3350,Aruba,,,509,18U,3503
+3351,Argentina,,,509,18U,3503
+3374,Louisiana Tech Bulldogs,College Baseball,107.0,22,College,5101
+3375,Arkansas Razorbacks,College Baseball,107.0,22,College,5101
+3390,Bradenton Marauders,Florida State League,123.0,14,A,401
+3410,Richmond Flying Squirrels,Eastern League,113.0,12,AA,201
+3430,ACL Reds,Arizona Complex League,121.0,16,ROK,701
+3431,Grand Valley State University Lakers,College Baseball,107.0,22,College,5101
+3450,Kernersville Bulldogs,College Baseball,107.0,22,College,5101
+3705,Columbia Fireflies,Carolina League,122.0,14,A,401
+3712,Fayetteville Woodpeckers,Carolina League,122.0,14,A,401
+3819,Western Kentucky Hilltoppers,College Baseball,107.0,22,College,5101
+3898,Wichita Wind Surge,Texas League,109.0,12,AA,201
+3904,Norfolk State Spartans,College Baseball,107.0,22,College,5101
+3924,Lenoir C.C. Lancers,College Baseball,107.0,22,College,5101
+3964,Victor Valley College Rams,College Baseball,107.0,22,College,5101
+3984,Salisbury University Sea Gulls,College Baseball,107.0,22,College,5101
+4064,Adelaide Giants,Australian Baseball League,595.0,17,WIN,1301
+4065,Brisbane Bandits,Australian Baseball League,595.0,17,WIN,1301
+4066,Canberra Cavalry,Australian Baseball League,595.0,17,WIN,1301
+4067,Melbourne Aces,Australian Baseball League,595.0,17,WIN,1301
+4068,Perth Heat,Australian Baseball League,595.0,17,WIN,1301
+4069,Sydney Blue Sox,Australian Baseball League,595.0,17,WIN,1301
+4104,Coastal Carolina Chanticleers,College Baseball,107.0,22,College,5101
+4124,Pensacola Blue Wahoos,Southern League,111.0,12,AA,201
+4164,Monmouth University Hawks,College Baseball,107.0,22,College,5101
+4244,Oklahoma Sooners,College Baseball,107.0,22,College,5101
+4245,Oklahoma State Cowboys,College Baseball,107.0,22,College,5101
+4264,Fresno Pacific Sunbirds,College Baseball,107.0,22,College,5101
+4284,Southeastern Fire,College Baseball,107.0,22,College,5101
+4304,Asheville Redbirds,College Baseball,107.0,22,College,5101
+4364,Grand Junction Rockies,Pioneer League,128.0,23,IND,2101
+4404,DSL Pirates Gold,Dominican Summer League,130.0,16,ROK,701
+4444,Generales de Durango,Mexican League,125.0,23,IND,2101
+4524,Southeastern Community College Blackhawks,College Baseball,107.0,22,College,5101
+4584,Cal Lutheran University Kingsmen,College Baseball,107.0,22,College,5101
+4744,Army Black Knights,College Baseball,107.0,22,College,5101
+4764,Texas A&M-Corpus Christi Islanders,College Baseball,107.0,22,College,5101
+4765,Alabama State Hornets,College Baseball,107.0,22,College,5101
+4766,Prairie View A&M Panthers,College Baseball,107.0,22,College,5101
+4767,Southern Jaguars,College Baseball,107.0,22,College,5101
+4784,University of Nevada Wolfpack,College Baseball,107.0,22,College,5101
+4806,Missouri Tigers,College Baseball,107.0,22,College,5101
+4824,Idaho Falls Bandits,,,586,H.S.,6201
+4844,East Tennessee State Bucs,College Baseball,107.0,22,College,5101
+4864,Minnesota Golden Gophers,College Baseball,107.0,22,College,5101
+4865,Nebraska Cornhuskers,College Baseball,107.0,22,College,5101
+4866,Indiana Hoosiers,College Baseball,107.0,22,College,5101
+4904,El Paso Chihuahuas,Pacific Coast League,112.0,11,AAA,101
+4924,Red,Tournament 12,625.0,586,H.S.,6201
+4925,Orange,Tournament 12,625.0,586,H.S.,6201
+4926,Navy,Tournament 12,625.0,586,H.S.,6201
+4927,Maroon,Tournament 12,625.0,586,H.S.,6201
+4928,Black,Tournament 12,625.0,586,H.S.,6201
+4929,Green,Tournament 12,625.0,586,H.S.,6201
+4934,TBD,Tournament 12,625.0,586,H.S.,6201
+4964,Florida Gulf Coast University Eagles,College Baseball,107.0,22,College,5101
+5005,DSL Astros Orange,Dominican Summer League,130.0,16,ROK,701
+5010,Toros de Tijuana,Mexican League,125.0,23,IND,2101
+5015,Biloxi Shuckers,Southern League,111.0,12,AA,201
+5020,West Virginia Black Bears,MLB Draft League,5536.0,22,College,5101
+5045,TCU Horned Frogs,College Baseball,107.0,22,College,5101
+5046,Vanderbilt Commodores,College Baseball,107.0,22,College,5101
+5047,USC Trojans,College Baseball,107.0,22,College,5101
+5048,UCLA Bruins,College Baseball,107.0,22,College,5101
+5055,PG East,Showcase Games,587.0,586,H.S.,6201
+5056,PG West,Showcase Games,587.0,586,H.S.,6201
+5057,American,Showcase Games,587.0,586,H.S.,6201
+5058,National,Showcase Games,587.0,586,H.S.,6201
+5066,St. Cloud State University,College Baseball,107.0,22,College,5101
+5067,St. Mary's Rattlers,College Baseball,107.0,22,College,5101
+5068,Tarleton State Texans,College Baseball,107.0,22,College,5101
+5069,Arkansas-Monticello Boll Weevils,College Baseball,107.0,22,College,5101
+5070,Central Missouri Mules,College Baseball,107.0,22,College,5101
+5080,Mississippi State Bulldogs,College Baseball,107.0,22,College,5101
+5085,DSL Phillies White,Dominican Summer League,130.0,16,ROK,701
+5086,DSL Tampa Bay,Dominican Summer League,130.0,16,ROK,701
+5087,DSL D-backs2,Dominican Summer League,130.0,16,ROK,701
+5090,Future Stars Series - Black,Showcase Games,587.0,586,H.S.,6201
+5092,Future Stars Series - Blue,Showcase Games,587.0,586,H.S.,6201
+5094,North,Showcase Games,587.0,586,H.S.,6201
+5097,SouthSouth,Showcase Games,587.0,586,H.S.,6201
+5105,East,Showcase Games,587.0,586,H.S.,6201
+5106,West,Showcase Games,587.0,586,H.S.,6201
+5308,Visiting Team,College Baseball,107.0,22,College,5101
+5309,Home Team,College Baseball,107.0,22,College,5101
+5310,Grand Canyon Antelopes,College Baseball,107.0,22,College,5101
+5312,University of Arkansas-Fort Smith Lions,College Baseball,107.0,22,College,5101
+5314,Texas A&M-Kingsville Javelinas,College Baseball,107.0,22,College,5101
+5320,San Diego Toreros,College Baseball,107.0,22,College,5101
+5322,Ole Miss Rebels,College Baseball,107.0,22,College,5101
+5323,Louisiana State Tigers,College Baseball,107.0,22,College,5101
+5324,Texas-Arlington Mavericks,College Baseball,107.0,22,College,5101
+5327,West Virginia Mountaineers,College Baseball,107.0,22,College,5101
+5360,Team Hank Aaron,Showcase Games,587.0,586,H.S.,6201
+5361,Team Jackie Robinson,Showcase Games,587.0,586,H.S.,6201
+5363,Sam Houston Bearkats,College Baseball,107.0,22,College,5101
+5366,Colorado School of Mines Orediggers,College Baseball,107.0,22,College,5101
+5368,Amarillo Sod Poodles,Texas League,109.0,12,AA,201
+5370,ACL Giants Orange,Arizona Complex League,121.0,16,ROK,701
+5374,ACL Guardians,Arizona Complex League,121.0,16,ROK,701
+5376,Alcorn State Braves,College Baseball,107.0,22,College,5101
+5377,Arkansas-Pine Bluff Golden Lions,College Baseball,107.0,22,College,5101
+5378,Grambling State Tigers,College Baseball,107.0,22,College,5101
+5380,New Orleans Privateers,College Baseball,107.0,22,College,5101
+5385,Eastern Michigan Eagles,College Baseball,107.0,22,College,5101
+5390,Wright State Raiders,College Baseball,107.0,22,College,5101
+5392,PG National 1 - Black,Showcase Games,587.0,586,H.S.,6201
+5393,PG National 2 - Gold,Showcase Games,587.0,586,H.S.,6201
+5394,PG National 3 - Gray,Showcase Games,587.0,586,H.S.,6201
+5395,PG National 4 - Green,Showcase Games,587.0,586,H.S.,6201
+5396,PG National 5 - Maroon,Showcase Games,587.0,586,H.S.,6201
+5397,PG National 6 - Navy,Showcase Games,587.0,586,H.S.,6201
+5398,PG National 7 - Orange,Showcase Games,587.0,586,H.S.,6201
+5399,PG National 8 - Purple,Showcase Games,587.0,586,H.S.,6201
+5400,PG National 9 - Red,Showcase Games,587.0,586,H.S.,6201
+5401,PG National 10 - Royal,Showcase Games,587.0,586,H.S.,6201
+5402,PG National 11 - Vegas Gold,Showcase Games,587.0,586,H.S.,6201
+5403,PG National 12 - White,Showcase Games,587.0,586,H.S.,6201
+5414,Cal State Fullerton Titans,College Baseball,107.0,22,College,5101
+5415,Virginia Cavaliers,College Baseball,107.0,22,College,5101
+5416,Florida A&M Rattlers,College Baseball,107.0,22,College,5101
+5417,Eastern Kentucky Colonels,College Baseball,107.0,22,College,5101
+5420,Texas State Bobcats,College Baseball,107.0,22,College,5101
+5424,Pittsburgh Panthers,College Baseball,107.0,22,College,5101
+5426,ACL Athletics,Arizona Complex League,121.0,16,ROK,701
+5427,ACL Dodgers,Arizona Complex League,121.0,16,ROK,701
+5428,Pawtucket Red Sox,,,23,IND,2101
+5430,ACL Brewers Blue,Arizona Complex League,121.0,16,ROK,701
+5431,High Point Rockers,Atlantic League,436.0,23,IND,2101
+5433,Southern Maryland Blue Crabs,Atlantic League,436.0,23,IND,2101
+5434,Sugar Land Space Cowboys,Pacific Coast League,112.0,11,AAA,101
+5435,York Revolution,Atlantic League,436.0,23,IND,2101
+5438,Arkansas Tech Wonderboys,College Baseball,107.0,22,College,5101
+5440,Panama,Caribbean Series,162.0,17,WIN,1301
+5450,Harvard Crimson,College Baseball,107.0,22,College,5101
+5451,UMass Minutemen,College Baseball,107.0,22,College,5101
+5453,Team Howard,Prospect Development Pipeline,5452.0,509,18U,3503
+5454,Team Jeter,Prospect Development Pipeline,5452.0,509,18U,3503
+5455,Team Jones,Prospect Development Pipeline,5452.0,509,18U,3503
+5456,Team Larkin,Prospect Development Pipeline,5452.0,509,18U,3503
+5464,Xavier Musketeers,College Baseball,107.0,22,College,5101
+5465,Cincinnati Bearcats,College Baseball,107.0,22,College,5101
+5466,Auburn Tigers,College Baseball,107.0,22,College,5101
+5467,Louisville Cardinals,College Baseball,107.0,22,College,5101
+5476,Florida,Showcase Games,587.0,586,H.S.,6201
+5477,Georgia,Showcase Games,587.0,586,H.S.,6201
+5482,Algodoneros de Guasave,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+5483,Sultanes de Monterrey,Liga Mexicana del Pacifico,132.0,17,WIN,1301
+5486,Connecticut Huskies,College Baseball,107.0,22,College,5101
+5487,Cal Poly Mustangs,College Baseball,107.0,22,College,5101
+5488,Millersville Marauders,College Baseball,107.0,22,College,5101
+5490,Flagler Saints,College Baseball,107.0,22,College,5101
+5492,Colombia,Caribbean Series,162.0,17,WIN,1301
+5506,DSL Guardians Red,Dominican Summer League,130.0,16,ROK,701
+5508,Gastonia Honey Hunters,Atlantic League,436.0,23,IND,2101
+5540,RA12,Liga de Beisbol Profesional Roberto Clemente,133.0,17,WIN,1301
+5542,Southern Illinois Miners,Frontier League,442.0,23,IND,2101
+5543,Texas Airhogs,Northern League,450.0,23,IND,2101
+5544,Cleburne Railroaders,Northern League,450.0,23,IND,2101
+5545,Rockland Boulders,Frontier League,442.0,23,IND,2101
+5546,Lake Erie Crushers,Frontier League,442.0,23,IND,2101
+5547,Chicago Dogs,Northern League,450.0,23,IND,2101
+5548,Milwaukee Milkmen,Northern League,450.0,23,IND,2101
+5550,Lubbock Christian Chaparrals,College Baseball,107.0,22,College,5101
+5552,Jackson State Tigers,College Baseball,107.0,22,College,5101
+5553,Alabama A&M Bulldogs,College Baseball,107.0,22,College,5101
+5554,Stephen F. Austin Lumberjacks,College Baseball,107.0,22,College,5101
+5556,Louisiana-Monroe Warhawks,College Baseball,107.0,22,College,5101
+5566,Mariachis de Guadalajara,Mexican League,125.0,23,IND,2101
+5567,El Aguila de Veracruz,Mexican League,125.0,23,IND,2101
+5568,Northern Colorado Owlz,Pioneer League,128.0,23,IND,2101
+5570,Villanova Wildcats,College Baseball,107.0,22,College,5101
+5572,East Carolina Pirates,College Baseball,107.0,22,College,5101
+5573,Tulane Green Wave,College Baseball,107.0,22,College,5101
+5574,Wichita State Shockers,College Baseball,107.0,22,College,5101
+5575,Central Florida Knights,College Baseball,107.0,22,College,5101
+5576,Memphis Tigers,College Baseball,107.0,22,College,5101
+5584,Tri-Cape All-Stars,Showcase Games,587.0,586,H.S.,6201
+5585,Mercer Co. All-Stars,Showcase Games,587.0,586,H.S.,6201
+5592,MD HS North All-Stars,Showcase Games,587.0,586,H.S.,6201
+5593,MD HS South All-Stars,Showcase Games,587.0,586,H.S.,6201
+5594,Red Sox (VA '22),Showcase Games,587.0,586,H.S.,6201
+5595,Mets (SC '22),Showcase Games,587.0,586,H.S.,6201
+5596,Giants (NC '22),Showcase Games,587.0,586,H.S.,6201
+5597,Braves (NC/SC '23),Showcase Games,587.0,586,H.S.,6201
+5600,Brewers (Mid-Atl '22),Showcase Games,587.0,586,H.S.,6201
+5601,Padres (VA/Mid-Atl '23),Showcase Games,587.0,586,H.S.,6201
+6011,Kansas State Wildcats,College Baseball,107.0,22,College,5101
+6012,Maryville Saints,College Baseball,107.0,22,College,5101
+6013,Augustana Vikings,College Baseball,107.0,22,College,5101
+6015,Kentucky Wild Health Genomes,Atlantic League,436.0,23,IND,2101
+6018,Dallas Baptist Patriots,College Baseball,107.0,22,College,5101
+6020,California Golden Bears,College Baseball,107.0,22,College,5101
+6022,Indiana State Sycamores,College Baseball,107.0,22,College,5101
+6023,Northwestern State Demons,College Baseball,107.0,22,College,5101
+6024,Appalachian State Mountaineers,College Baseball,107.0,22,College,5101
+6025,Charlotte 49ers,College Baseball,107.0,22,College,5101
+6026,Davidson Wildcats,College Baseball,107.0,22,College,5101
+6027,North Carolina Tar Heels,College Baseball,107.0,22,College,5101
+6028,South Carolina Gamecocks,College Baseball,107.0,22,College,5101
+6029,Nebraska Omaha Mavericks,College Baseball,107.0,22,College,5101
+6030,Brigham Young Cougars,College Baseball,107.0,22,College,5101
+6031,UC San Diego Tritons,College Baseball,107.0,22,College,5101
+6032,UC Santa Barbara Gauchos,College Baseball,107.0,22,College,5101
+6033,Gonzaga Bulldogs,College Baseball,107.0,22,College,5101
+6034,Notre Dame Fighting Irish,College Baseball,107.0,22,College,5101
+6035,Alma College Scots,College Baseball,107.0,22,College,5101
+6036,Purdue Boilermakers,College Baseball,107.0,22,College,5101
+6037,South Dakota State Jackrabbits,College Baseball,107.0,22,College,5101
+6038,ACL D-backs Red,Arizona Complex League,121.0,16,ROK,701
+6039,North Carolina State Wolfpack,College Baseball,107.0,22,College,5101
+6040,Kansas Jayhawks,College Baseball,107.0,22,College,5101
+6041,Wake Forest Demon Deacons,College Baseball,107.0,22,College,5101
+6042,Clemson Tigers,College Baseball,107.0,22,College,5101
+6043,Duke Blue Devils,College Baseball,107.0,22,College,5101
