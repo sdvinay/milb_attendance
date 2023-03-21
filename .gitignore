@@ -1,6 +1,5 @@
-*.csv
-*.txt
-*.json
 output
 __pycache__/
 *.swp
+.vscode
+.space
