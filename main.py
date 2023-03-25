@@ -1,6 +1,13 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+from timing_asgi import TimingMiddleware, TimingClient
+from timing_asgi.integrations import StarletteScopeToName
 import scrape_attendance as sa
+
+class PrintTimings(TimingClient):
+    def timing(self, metric_name, timing, tags):
+        print(metric_name, timing, tags)
+
 
 app = FastAPI()
 
@@ -23,3 +30,9 @@ def generate_gbg_report(season: int = 2022) -> HTMLResponse:
     df = sa.generate_gbg_report(att)
     html = df.to_html()
     return HTMLResponse(content=html)
+
+app.add_middleware(
+    TimingMiddleware,
+    client=PrintTimings(),
+    metric_namer=StarletteScopeToName(prefix="myapp", starlette_app=app)
+)
