@@ -15,9 +15,12 @@ def get_attendance_sport_id(sport_id: int, season: int = 2022) -> pd.DataFrame:
     params = {'sportId': sport_id, 'season': season, 'hydrate': 'gameInfo'}
     schedule_data = requests.get(SCHEDULE_URL, params).json()
     all_gms = pd.json_normalize(schedule_data['dates'], record_path=['games']).set_index('gamePk')
-    played_gms = all_gms.dropna(subset=['isTie']).copy() # filter to include only completed/current games
-    logging.info(f'get_attendance_sport_id sport_id={sport_id} season={season};  returning {len(played_gms)} games')
-    return played_gms
+    if 'isTie' in all_gms.columns:
+        played_gms = all_gms.dropna(subset=['isTie']).copy() # filter to include only completed/current games
+        logging.info(f'get_attendance_sport_id sport_id={sport_id} season={season};  returning {len(played_gms)} games')
+        return played_gms
+    else:
+        return None
 
 def get_attendance_all_levels(season: int = 2022) -> pd.DataFrame:
     # Each MILB level has its own sport_id, so iterate over them
